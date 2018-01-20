@@ -41,6 +41,8 @@ SyntaxError: invalid token
             ^
 SyntaxError: invalid syntax
 
+Exercise 1-2:
+
 Problem: Use python terminal as a calculator.
 Assumption(s):
 1. How many seconds are there in 42 minutes and 42 seconds: (42 * 60) + 42 = 2292
@@ -50,4 +52,4 @@ Assumption(s):
 Result:
 1. 2562
 2. 6.211180124223602
-3. 7m 20s (6.874700000000001); 8.727653570337614 miles/hr 
+3. 7m 20s (6.874700000000001); 8.727653570337614 miles/hr
