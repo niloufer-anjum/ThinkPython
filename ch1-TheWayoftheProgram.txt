@@ -1,0 +1,53 @@
+Exercise 1-1:
+
+Problem: In the "Hello World!" program, what happens if you
+Assumption(s):
+1. Leave out one quotation marks: prompts to end the statement under quotation
+2. Leave out both: prints Hello is not defined
+3. Spell print wrong: prints prnt is not defined
+4. Leave out one of the parentheses: raises SyntaxError at the missed out parentheses
+5. Leave out both parentheses: raises SyntaxError
+6. Put a plus sign before a number (e.g., 2++2): adds and prints out 5
+7. Lead a number with a zero (e.g., 02): shows 2
+8. Have two values with no operator between them: Prints out the numbers
+
+Result:
+1.  File "<stdin>", line 1
+    print("Hello World!)
+                       ^
+SyntaxError: EOL while scanning string literal
+2.  File "<stdin>", line 1
+    print(Hello World!)
+                    ^
+SyntaxError: invalid syntax
+3.  File "<stdin>", line 1
+    prnt(Hello World!)
+                   ^
+SyntaxError: invalid syntax
+4. print("Hello World!"
+...|
+
+5.  File "<stdin>", line 1
+    print "Hello World!"
+                       ^
+SyntaxError: Missing parentheses in call to 'print'
+6. 4
+7.   File "<stdin>", line 1
+    print(02)
+           ^
+SyntaxError: invalid token
+8.  File "<stdin>", line 1
+    print(2 4)
+            ^
+SyntaxError: invalid syntax
+
+Problem: Use python terminal as a calculator.
+Assumption(s):
+1. How many seconds are there in 42 minutes and 42 seconds: (42 * 60) + 42 = 2292
+2. How many miles are there in 10 km (1 mile = 1.61 km): 10/1.61 = 5.25
+3. If you run a 10 kilometer race in 42 minutes 42 seconds, what is your average pace (time per mile in minutes and seconds)? What is your average speed in miles per hour: 2292/5.25 = 458 = 458/60 = 23/3 = 7 m 20 s; 2292/60 = 7.2m/60 = 0.9 h = 5.25/0.9 = 5.25 miles/hr
+
+Result:
+1. 2562
+2. 6.211180124223602
+3. 7m 20s (6.874700000000001); 8.727653570337614 miles/hr 
