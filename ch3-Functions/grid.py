@@ -1,110 +1,32 @@
-def print_one(str1):
-    print(str1, end="")
+from __future__ import print_function
 
-def print_min(str1):
-    return(str1 + ' ' + str1 + ' ' + str1 + ' ' + str1)
+def do_twice(f):
+    f()
+    f()
 
-def do_twice(f, str1, str2, end_str):
-    print(f(str1) + str2, end="")
-    print(f(str1) + str2, end=end_str)
-
-def do_four(f, str1, str2, end_str):
-    print_one(str2)
-    do_twice(f, str1, str2, end_str)
-    print_one(str2)
-    do_twice(f, str1, str2, end_str)
-    print_one(str2)
-    do_twice(f, str1, str2, end_str)
-    print_one(str2)
-    do_twice(f, str1, str2, end_str)
-
-def grid_4():
-    print_one('+ ')
-    do_twice(print_min, '-', ' + ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '\n')
-
-    print_one('+ ')
-    do_twice(print_min, '-', ' + ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('+ ')
-    do_twice(print_min, '-', ' + ', '\n')
+def do_four(f):
+    do_twice(f)
+    do_twice(f)
 
 
-def grid_8():
-    print_one('+ ')
-    do_twice(print_min, '-', ' + ', '')
-    do_twice(print_min, '-', ' + ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('+ ')
-    do_twice(print_min, '-', ' + ', '')
-    do_twice(print_min, '-', ' + ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('+ ')
-    do_twice(print_min, '-', ' + ', '')
-    do_twice(print_min, '-', ' + ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('+ ')
-    do_twice(print_min, '-', ' + ', '')
-    do_twice(print_min, '-', ' + ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('| ')
-    do_twice(print_min, ' ', ' | ', '')
-    do_twice(print_min, ' ', ' | ', '\n')
-    print_one('+ ')
-    do_twice(print_min, '-', ' + ', '')
-    do_twice(print_min, '-', ' + ', '\n')
+def print_beam():
+    print('+ - - - -', end=' ')
 
+def print_post():
+    print('|        ', end=' ')
 
-grid_4()
-grid_8()
+def print_beams():
+    do_twice(print_beam)
+    print('+')
+
+def print_posts():
+    do_twice(print_post)
+    print('|')
+
+def print_row():
+    print_beams()
+    do_four(print_posts)
+
+def print_grid():
+    do_twice(print_row)
+    print_beams()
